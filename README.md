@@ -190,9 +190,7 @@ Endpoint: `/products`
 Request Type: `POST`
 
 Request Body: Upload a .csv file
-Format:
-	name    description    quantity    price
-ABC Laptop	Latest Laptop	10			999
+
 Response `200` :
 
 {
