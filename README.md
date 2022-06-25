@@ -31,7 +31,7 @@ Response `400`:
 
 {
 	"status":'fail',
-	"message":"err!"
+	"message":"Bad Request!"
 }
 
 ### 2. LogIn
@@ -71,7 +71,7 @@ Response `400`:
 
 {
 	"status":'fail',
-	"message":"err!"
+	"message":"Bad Request!"
 }
 
 ### 3. Fetch User List
@@ -88,7 +88,7 @@ Response `200` :
 
 {
 	"status":'success',
-   "data":{....}
+    "data":{....}
 }
 
 Response `401`:
@@ -105,10 +105,10 @@ Response `400`:
 
 {
 	"status":'fail',
-	"message":"err!"
+	"message":"Bad Request!"
 }
 
-### 4. Fetch User Details
+### 4. Fetch User Details (Current Logged In User)
 
 Api description
 
@@ -122,7 +122,7 @@ Response `200` :
 
 {
 	"status":'success',
-   "data":{....}
+    "data":{....}
 }
 
 Response `401`:
@@ -139,10 +139,44 @@ Response `400`:
 
 {
 	"status":'fail',
-	"message":"err!"
+	"message":"Bad Request!"
 }
 
-### 5. Upload Products
+### 5. Fetch Any User Details By User Id
+
+Api description
+
+Endpoint: `/:id`
+
+Request Type: `GET`
+
+Request Body: empty
+
+Response `200` :
+
+{
+	"status":'success',
+    "data":{....}
+}
+
+Response `401`:
+
+
+{
+	"status":'fail',
+	"message":"unauthorized"
+}
+
+
+Response `400`:
+
+
+{
+	"status":'fail',
+	"message":"Bad Request!"
+}
+
+### 6. Upload Products
 
 Api description
 
@@ -151,7 +185,9 @@ Endpoint: `/products`
 Request Type: `POST`
 
 Request Body: Upload a .csv file
-
+Format:
+	name    description    quantity    price
+ABC Laptop	Latest Laptop	10			999
 Response `200` :
 
 {
@@ -173,10 +209,10 @@ Response `400`:
 
 {
 	"status":'fail',
-	"message":"err!"
+	"message":"Bad Request!"
 }
 
-### 6. Fetch Product List
+### 7. Fetch Product List
 
 Api description
 
@@ -207,5 +243,5 @@ Response `400`:
 
 {
 	"status":'fail',
-	"message":"err!"
+	"message":"Bad Request!"
 }
