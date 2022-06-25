@@ -13,5 +13,6 @@ router.get(
   authController.protect,
   userController.getUserDetails
 );
+router.get('/:id',authController.protect, userController.getUser);
 
 module.exports = router;
