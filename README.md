@@ -1,3 +1,8 @@
+Run application:
+Step 1: Download zip and extract folders
+Step 2: Open terminal and change ti this directory and run command "npm i"
+Step 3: Run command "npm start" or "npm run start:dev"(for running in development) to start application
+
 ## API DOCUMENTATION
 
 ### 1. SignUp
